@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.contrib.auth.models import User
 
 
 class Location(models.Model):
@@ -26,7 +26,7 @@ class Location(models.Model):
 class Rating(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    stars = models.FloatField(validators=[MinValueValidator(1),MaxValueValidator(5)])
+    stars = models.FloatField(validators=[MinValueValidator(1.0), MaxValueValidator(5.0)])
 
     class Meta:
         unique_together = (('user', 'location'),)

@@ -1,7 +1,13 @@
 from rest_framework import serializers
-from .models import Location, Rating
 from django.contrib.auth.models import User
+from .models import Location, Rating
 from rest_framework.authtoken.models import Token
+
+
+class LocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Location
+        fields = ('id', 'name', 'description', 'no_of_ratings', 'avg_rating')
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -14,12 +20,6 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         Token.objects.create(user=user)
         return user
-
-
-class LocationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Location
-        fields = ('id', 'name', 'description', 'no_of_ratings', 'avg_rating')
 
 
 class RatingSerializer(serializers.ModelSerializer):
