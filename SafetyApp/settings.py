@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from decouple import config
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,15 +21,12 @@ MODEL_ROOT = os.path.join(BASE_DIR, 'models')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '5_p#u!bstx(plag_#)2q0za=uh+ho94ha@@k&^o=pd$a^dm^vk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG')
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    config('Host1'),
-    config('Host2'),
-    config('Host3')
 ]
 
 
