@@ -1,6 +1,6 @@
 # SafetyApp_Backend
 
-This repository features the <b>Backend</b> of the <b>"SafetyApp_Mobile"</b> application [Check Here](https://github.com/sourabbanka22/SafetyApp_Mobile)  which was developed using React-Native.
+This repository features the <b>Backend</b> of the <b>"SafetyApp_Mobile"</b> application [Check Here](https://drive.google.com/file/d/1IxlGymqZNfHKW4ILyzy0SjYDcd-IOuc1/view)  which was developed using React-Native.
 This application uses Django to develop a REST API backend with an integrated cutting edge tech <b>"Machine Learning"</b> to predict results based on the DateTime and Location input provided. Although the trained model is directly included inside the models folder 
 inside this repository. The MachineLearning models have been trained seperately and pickled to generate a trained model
 which is a binary file with .pkl extension.
